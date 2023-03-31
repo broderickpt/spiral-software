@@ -722,19 +722,19 @@ void PrMakeRange (STREAM stream, Obj hdMake, int indent)
     else 
     {
         //**INDENT** Pr("%2>[ %2>",0,0);   
-        SyFmtPrint(stream, "%2>[ %2");
+        SyFmtPrint(stream, "[ ");
         //Print( PTR_BAG(hdMake)[0] );
         PrintObj(stream, PTR_BAG(hdMake)[0], indent);
         //**INDENT** Pr("%<,%< %2>",0,0);  
-        SyFmtPrint(stream, "%<,%< %2>");
+        SyFmtPrint(stream, ", ");
         //Print( PTR_BAG(hdMake)[1] );
         PrintObj(stream, PTR_BAG(hdMake)[1], indent);
         //**INDENT** Pr("%2< .. %2>",0,0);  
-        SyFmtPrint(stream, "%2< .. %2>");
+        SyFmtPrint(stream, " .. ");
         //Print( PTR_BAG(hdMake)[2] );
         PrintObj(stream, PTR_BAG(hdMake)[2], indent);
         //**INDENT** Pr(" %4<]",0,0);
-        SyFmtPrint(stream, " %4<]");
+        SyFmtPrint(stream, " ]");
     }
 }
 
